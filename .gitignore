@@ -1,36 +1,61 @@
 # Prerequisites
+
 *.d
 
+
 # Compiled Object files
+
 *.slo
+
 *.lo
+
 *.o
+
 *.obj
 
+
 # Precompiled Headers
+
 *.gch
+
 *.pch
 
+
 # Compiled Dynamic libraries
+
 *.so
+
 *.dylib
+
 *.dll
 
+
 # Fortran module files
+
 *.mod
+
 *.smod
 
+
 # Compiled Static libraries
+
 *.lai
+
 *.la
+
 *.a
+
 *.lib
 
+
 # Executables
+
 *.exe
+
 *.out
+
 *.app
 
-#C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\proj.win32\Debug.win32
-#C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\proj.win32\.vs
-#C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\cocos2d
+C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\proj.win32\Debug.win32
+C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\proj.win32\.vs
+C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\cocos2d
