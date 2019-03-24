@@ -1,0 +1,10 @@
+BackgroundLayerTag	1000
+PlayerLayerTag		1001
+OpponentLayerTag		1002
+UILayerTag		1003
+InputLayerTag		1004
+TitleLayerTag		1005
+
+PlayerTag			2000
+EnemyStartTag		3000
+WallStartTag		4000

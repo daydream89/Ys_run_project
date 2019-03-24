@@ -1,0 +1,5 @@
+EnemySpritePath		image\\enemy.png
+WallSpritePath		image\\wall.png
+PlayerSpritePath		image\\player.png
+BackgroundSpritePath	image\\background.png
+TitleImagePath		image\\title.png

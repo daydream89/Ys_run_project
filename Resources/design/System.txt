@@ -1,0 +1,21 @@
+PlayerSpeed		3
+
+BGStartingYBasic		640
+BGStartingYNext		1280
+OpponentStartingY		800
+
+ScrollingVelocity		80
+ScrollingWeight		4
+ScrollingEndPosY		-640
+
+EnemyCreateDelay		3
+WallCreateDelay		7
+AdditionalCreateDelay	1
+
+DefaultEnemyHp		1
+
+KnockBackCoefficient	1.5
+
+CollisionThickness		3
+
+StageTimeLengthSec	30
