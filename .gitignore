@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+#C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\proj.win32\Debug.win32
+#C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\proj.win32\.vs
+#C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\cocos2d
