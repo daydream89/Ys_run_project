@@ -56,9 +56,6 @@
 
 *.app
 
-C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\proj.win32\Debug.win32
-C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\proj.win32\.vs
-C:\Users\daydream\Desktop\Ys_Run_project\Ys_Run_project\cocos2d
 cocos2d
 proj.win32/.vs/Ys_Run/v15/.suo
 proj.win32/.vs/Ys_Run/v15/Browse.VC.db
