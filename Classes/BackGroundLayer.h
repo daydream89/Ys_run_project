@@ -19,6 +19,9 @@ public:
 
 public:
 	static cocos2d::Layer *CreateLayer();
+
+	BackGroundLayer();
+	virtual ~BackGroundLayer();
 	
 	virtual bool init();
 	virtual void onEnter();

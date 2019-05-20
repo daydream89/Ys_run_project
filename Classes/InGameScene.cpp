@@ -17,6 +17,16 @@ Scene* InGameScene::createScene()
     return InGameScene::create();
 }
 
+InGameScene::InGameScene()
+{
+
+}
+
+InGameScene::~InGameScene()
+{
+
+}
+
 // on "init" you need to initialize your instance
 bool InGameScene::init()
 {

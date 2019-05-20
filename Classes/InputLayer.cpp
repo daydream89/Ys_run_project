@@ -76,6 +76,16 @@ Layer *InputLayer::CreateLayer()
 	return InputLayer::create();
 }
 
+InputLayer::InputLayer()
+{
+	
+}
+
+InputLayer::~InputLayer()
+{
+
+}
+
 bool InputLayer::init()
 {
 	EventListenerKeyboard *pKeylistener = EventListenerKeyboard::create(); 

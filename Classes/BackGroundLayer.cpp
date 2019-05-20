@@ -31,6 +31,16 @@ Layer *BackGroundLayer::CreateLayer()
 	return BackGroundLayer::create();
 }
 
+BackGroundLayer::BackGroundLayer()
+{
+	
+}
+
+BackGroundLayer::~BackGroundLayer()
+{
+
+}
+
 bool BackGroundLayer::init()
 {
 	if (EventManager::GetInstance())

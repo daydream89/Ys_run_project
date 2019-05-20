@@ -35,6 +35,16 @@ namespace PlayerLayerPrivate
 	}
 }
 
+PlayerLayer::PlayerLayer()
+{
+	
+}
+
+PlayerLayer::~PlayerLayer()
+{
+	
+}
+
 bool PlayerLayer::init()
 {
 	if (EventManager::GetInstance())
@@ -44,7 +54,6 @@ bool PlayerLayer::init()
 
 		m_listenerIdList[EVENT_TYPE_INPUT] = EventManager::GetInstance()->AddEventListener(
 			EVENT_TYPE_INPUT, std::bind(&PlayerLayer::EventInput, this, std::placeholders::_1));
-
 	}
 
 	scheduleUpdate();
@@ -224,6 +233,6 @@ void PlayerLayer::EventInput(EventInputMsg msg)
 				if (msg.inputState == m_curInputKey)
 					m_curInputKey = INPUT_KEY_NONE;
 			}
-		}
+		}break;
 	}
 }

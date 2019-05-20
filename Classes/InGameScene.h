@@ -10,6 +10,9 @@ class InGameScene : public BaseScene
 public:
     static cocos2d::Scene* createScene();
 
+	InGameScene();
+	virtual ~InGameScene();
+
     virtual bool init();
 	virtual void onEnter();
 	virtual void onExit();

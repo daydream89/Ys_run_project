@@ -15,6 +15,16 @@ Scene* TitleScene::createScene()
 	return TitleScene::create();
 }
 
+TitleScene::TitleScene()
+{
+
+}
+
+TitleScene::~TitleScene()
+{
+
+}
+
 // on "init" you need to initialize your instance
 bool TitleScene::init()
 {

@@ -10,6 +10,9 @@ class PlayerLayer : public BaseLayer
 public:
 	static cocos2d::Layer *CreateLayer();
 
+	PlayerLayer();
+	virtual ~PlayerLayer();
+
 	virtual bool init();
 	virtual void onEnter();
 	virtual void onExit();

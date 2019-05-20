@@ -10,6 +10,9 @@ class TitleScene : public BaseScene
 public:
 	static cocos2d::Scene* createScene();
 
+	TitleScene();
+	virtual ~TitleScene();
+
 	virtual bool init();
 	virtual void onEnter();
 	virtual void onExit();

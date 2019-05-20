@@ -6,6 +6,16 @@ USING_NS_CC;
 
 // todo. need menu UI & game pause
 
+UILayer::UILayer()
+{
+	
+}
+
+UILayer::~UILayer()
+{
+
+}
+
 bool UILayer::init()
 {
 	if (EventManager::GetInstance())
@@ -15,6 +25,9 @@ bool UILayer::init()
 
 		m_listenerIdList[EVENT_TYPE_NEXT_STAGE] = EventManager::GetInstance()->AddEventListener(
 			EVENT_TYPE_NEXT_STAGE, std::bind(&UILayer::EventNextStage, this, std::placeholders::_1));
+
+		m_listenerIdList[EVENT_TYPE_INPUT] = EventManager::GetInstance()->AddEventListener(
+			EVENT_TYPE_INPUT, std::bind(&UILayer::EventInput, this, std::placeholders::_1));
 	}
 
 	scheduleUpdate();
@@ -28,6 +41,7 @@ void UILayer::onEnter()
 	Layer::onEnter();
 
 	m_isGameOver = false;
+	m_isRestart = false;
 
 	m_isShownStageAlertUI = false;
 	m_curStageAlertUIDelay = 0.f;
@@ -48,6 +62,7 @@ void UILayer::onExit()
 	{
 		EventManager::GetInstance()->RemoveEventListener(EVENT_TYPE_GAMEOVER, m_listenerIdList[EVENT_TYPE_GAMEOVER]);
 		EventManager::GetInstance()->RemoveEventListener(EVENT_TYPE_NEXT_STAGE, m_listenerIdList[EVENT_TYPE_NEXT_STAGE]);
+		EventManager::GetInstance()->RemoveEventListener(EVENT_TYPE_INPUT, m_listenerIdList[EVENT_TYPE_INPUT]);
 	}
 }
 
@@ -64,6 +79,17 @@ void UILayer::update(float delta)
 			RemoveNextStageUI();
 			m_curStageAlertUIDelay = 0.f;
 		}
+	}
+
+	// event listener function에서 바로 호출하면 문제 생김.
+	// todo. event handler가 queueing을 통해 다음 프레임에 처리할 수 있도록 처리 필요.
+	if (m_isRestart == true)
+	{
+		EventSystemMsg msg;
+		msg.type = EVENT_TYPE_RESTART;
+		EventManager::GetInstance()->NotifyEvent(msg);
+
+		m_isRestart = false;
 	}
 
 	if (GameManager::GetInstance())
@@ -289,4 +315,26 @@ void UILayer::EventNextStage(EventSystemMsg msg)
 
 	unsigned int curStage = static_cast<unsigned int>(msg.value);
 	ShowNextStageUI(curStage);
+}
+
+void UILayer::EventInput(EventInputMsg msg)
+{
+	if (msg.type != EVENT_TYPE_INPUT)
+		return;
+
+	switch(msg.inputState)
+	{
+		case INPUT_KEY_ENTER:
+		{
+			if (m_isGameOver == true && msg.isPressed == true)
+			{
+				m_isRestart = true;
+			}
+		}break;
+		case INPUT_KEY_ESC:
+		{
+			if (Director::getInstance())
+				Director::getInstance()->end();
+		}break;
+	}
 }

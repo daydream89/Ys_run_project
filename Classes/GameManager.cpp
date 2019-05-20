@@ -109,8 +109,18 @@ GameManager *GameManager::m_pGameManager = nullptr;
 GameManager *GameManager::GetInstance()
 {
 	if (m_pGameManager == nullptr)
-		m_pGameManager = new GameManager;
+		m_pGameManager = new GameManager();
 	return m_pGameManager;
+}
+
+GameManager::GameManager()
+{
+
+}
+
+GameManager::~GameManager()
+{
+	Release();
 }
 
 void GameManager::Init(const cocos2d::Size &visibleSize)

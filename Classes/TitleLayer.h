@@ -10,6 +10,9 @@ class TitleLayer : public BaseLayer
 public:
 	static cocos2d::Layer *CreateLayer();
 
+	TitleLayer();
+	virtual ~TitleLayer();
+
 	virtual bool init();
 	virtual void onEnter();
 	virtual void onExit();

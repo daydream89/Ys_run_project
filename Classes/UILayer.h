@@ -10,6 +10,9 @@ class UILayer : public BaseLayer
 public:
 	static cocos2d::Layer *CreateLayer();
 
+	UILayer();
+	virtual ~UILayer();
+
 	virtual bool init();
 	virtual void onEnter();
 	virtual void onExit();
@@ -34,11 +37,13 @@ public:
 
 	void EventGameOver(EventSystemMsg msg);
 	void EventNextStage(EventSystemMsg msg);
+	void EventInput(EventInputMsg msg);
 
 	CREATE_FUNC(UILayer);
 	
 private:
 	bool m_isGameOver;
+	bool m_isRestart;
 	
 	bool m_isShownStageAlertUI;
 	float m_curStageAlertUIDelay;

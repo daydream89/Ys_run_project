@@ -10,8 +10,11 @@
 class BaseScene : public cocos2d::Scene
 {
 public:
-	virtual bool AttachLayer() { return true; }
-	virtual bool DetachLayer() { return true; }
+	BaseScene() {  }
+	virtual ~BaseScene() {  }
+
+	virtual bool AttachLayer() = 0;
+	virtual bool DetachLayer() = 0;
 
 protected:
 	unsigned int m_listenerIdList[EVENT_TYPE_MAX];

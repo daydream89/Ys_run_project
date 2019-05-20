@@ -22,8 +22,10 @@ public:
 
 private:
 	static GameManager *m_pGameManager;
+	GameManager();
 public:
 	static GameManager *GetInstance();
+	~GameManager();
 
 	void Init(const cocos2d::Size &visibleSize);
 	void Update(float delta = 0.f);

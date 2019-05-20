@@ -8,6 +8,16 @@ USING_NS_CC;
 #define OPACITY_MIN 0
 #define OPACITY_MAX 255
 
+TitleLayer::TitleLayer()
+{
+	
+}
+
+TitleLayer::~TitleLayer()
+{
+
+}
+
 bool TitleLayer::init()
 {
 	scheduleUpdate();

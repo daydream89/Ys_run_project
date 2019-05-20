@@ -82,6 +82,16 @@ namespace OpponentLayerPrivate
 	}
 }
 
+OpponentLayer::OpponentLayer()
+{
+	
+}
+
+OpponentLayer::~OpponentLayer()
+{
+
+}
+
 bool OpponentLayer::init()
 {
 	if (EventManager::GetInstance())

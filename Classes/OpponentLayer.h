@@ -10,6 +10,9 @@ class OpponentLayer : public BaseLayer
 public:
 	static cocos2d::Layer *CreateLayer();
 
+	OpponentLayer();
+	virtual ~OpponentLayer();
+
 	virtual bool init();
 	virtual void onEnter();
 	virtual void onExit();

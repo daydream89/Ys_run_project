@@ -10,6 +10,9 @@ class InputLayer : public BaseLayer
 public:
 	static cocos2d::Layer *CreateLayer();
 
+	InputLayer();
+	virtual ~InputLayer();
+
 	virtual bool init();
 
 	virtual void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
